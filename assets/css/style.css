@@ -1,7 +1,14 @@
 /* body */
 body{
+    background: rgba(211, 211, 211, 0.192);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
+}
+/* main */
+main{
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 2rem;
     padding-bottom: 1rem;
     padding-left: 4rem;
@@ -45,6 +52,14 @@ i{
 .text-end{
     text-align: end;
 }
+/* text align center */
+.text-center{
+    text-align: center;
+}
+/* text color */
+.text-purple{
+    color: #E02C6D;
+}
 /* margin left auto */
 .ms-auto{
     margin-left: auto;
@@ -82,8 +97,8 @@ a{
     align-items: center;
     justify-content: center;
 }
-#banner-image-container-2{
-    display: none;
+#banner-image-container-2, .extra-item{
+    display: none!important;
 }
 /* banner image */
 #banner-image{
@@ -126,19 +141,149 @@ a{
 .btn:hover{
     background: #9c1a4a;
 }
-
-
+/* logos-container */
+#logos-container{
+    height: 100px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, rgba(211, 211, 211, 0.295), rgba(128, 128, 128, 0.301), rgba(211, 211, 211, 0.295));
+    border-image-slice: 1;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/* popular-collection-section */
+#popular-collection-section{
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+/* collection-container */
+.collection-container{
+    display: flex;
+    justify-content: center;
+}
+/* collection-container > container */
+.collection-container .container{
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+/* collection-container > container > item */
+.collection-container .container .item{
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    border: 1px solid rgba(211, 211, 211, 0.555);
+    border-radius: 10px;
+}
+/* collection-container > container > item > image */
+.collection-container .container .item img{
+    height: 256px;
+}
+/* collection-container > container > item > title */
+.collection-container .container .item .title{
+    font-size: 28px;
+    font-weight: 550;
+}
+/* collection-container > container > item > price */
+.collection-container .container .item .price{
+    font-size: 25px;
+    font-weight: normal;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+/* collection-container > container > item > star icon */
+.collection-container .container i{
+    font-size: small;
+    color: rgb(255, 174, 0);
+}
+/* margin left 10px */
+.ms-10px{
+    margin-left: 10px;
+}
+/* text color */
+.text-secondary{
+    color: gray;
+}
+/* featured-products-section */
+#featured-products-section{
+    max-width: 1050px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    line-height: 25px;
+}
+/* featured-products-section > title */
+#featured-products-section .title{
+    font-size: 30px;
+    font-weight: 700;
+}
+/* border radius 0px */
+.rounded-0{
+    border-radius: 0px;
+}
+/* footer */
+#footer{
+    background: #0A0826;
+    color: white;
+    padding: 60px;
+    text-align: center;
+    line-height: 33px;
+}
+/* footer > btn */
+#footer button {
+    background: #201f36;
+    color: white;
+    height: 32px;
+    width: 32px;
+    border: 0px;
+    border-radius: 100%;
+    margin: 10px;
+    cursor: pointer;
+}
 /* media query */
 /* max width 1160px */
 @media screen and (max-width: 1160px) {
     /* banner image container */
     #banner-image-container, #banner-image-container-2{
-        height: 350px;
-        width: 350px;
+        height: 300px;
+        width: 300px;
     }
     /* banner section > title */
     #banner-section .title{
         font-size: 30px;
+    }
+    /* collection-container > container > item > image */
+    .collection-container .container .item img{
+        height: 200px;
+    }
+}
+/* max width 1000px */
+@media screen and (max-width: 1000px) {
+    /* logos container > image */
+    #logos-container img{
+        height: 23px;
+    }
+    /* featured-products-section */
+    #featured-products-section{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        text-align: center;
+    }
+    /* featured-products-section > btn */
+    #featured-products-section .btn{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 /* max width 900px */
@@ -171,30 +316,62 @@ a{
         display: none;
     }
     /* display banner image 2 */
-    #banner-image-container-2{
-        display: block;
+    #banner-image-container-2, .extra-item{
+        display: block!important;
+        margin: auto;
     }
     /* banner section > btn */
     #banner-section .btn{
         margin-left: auto;
         margin-right: auto;
     }
+    /* logos container */
+    #logos-container{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    /* collection-container > container */
+    .collection-container .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 /* max width 700px */
 @media screen and (max-width: 700px) {
-    /* body */
-    body{
+    /* main */
+    main{
         padding: 1rem;
         padding-top: 2rem;
     }
     /* #banner-image-container-2 */
     #banner-image-container-2{
-        height: 300px;
-        width: 300px;
+        height: 320px;
+        width: 320px;
     }
     .p-3{
         padding-left: 0px;
         padding-right: 0px;
+    }
+}
+/* max width 650px */
+@media screen and (max-width: 650px) {
+    /* collection-container > container */
+    .collection-container .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* featured-products-section > image */
+    #featured-products-section img{
+        width: 100%;
+    }
+    /* featured-products-section > title */
+    #featured-products-section .title{
+        line-height: 40px;
+        font-weight: 600;
+    }
+    /* footer */
+    #footer{
+        padding: 30px;
     }
 }
 /* max width 400px */
@@ -203,5 +380,13 @@ a{
     #banner-image-container-2{
         height: 250px;
         width: 250px;
+    }
+    /* logos container */
+    #logos-container{
+        height: auto;
+        padding: 1rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
     }
 }
