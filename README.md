@@ -5,4 +5,4 @@
 ### Live Site:
 <https://sejinahmedph.github.io/influencer-gear/>
 
-![/assets/images/main-camera.png]
+![Reference Image](/assets/images/main-camera.png)
