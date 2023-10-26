@@ -1,2 +1,2 @@
 Live Site:
-https://sejinahmedph.github.io/influencer-gear/ 
+<https://sejinahmedph.github.io/influencer-gear/>
